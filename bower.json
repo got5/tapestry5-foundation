@@ -1,0 +1,7 @@
+{
+  "name": "tapestry5-foundation",
+  "version": "0.0.0",
+  "dependencies": {
+    "foundation": "5.5.1"
+ }
+}

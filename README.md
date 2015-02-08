@@ -6,3 +6,8 @@
 	
 - **Reveal**
 	- Based on [http://foundation.zurb.com/docs/components/reveal.html](http://foundation.zurb.com/docs/components/reveal.html)	
+
+- **Magellan**
+	- Based on [http://foundation.zurb.com/docs/components/magellan.html](http://foundation.zurb.com/docs/components/magellan.html)	
+	
+	

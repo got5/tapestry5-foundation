@@ -1,0 +1,121 @@
+<html t:type="layout"
+	xmlns:t="http://tapestry.apache.org/schema/tapestry_5_4.xsd"
+	xmlns:p="tapestry:parameter">
+
+
+           <div class="large-9 medium-8 columns">
+              <h1 id="magellan">Magellan</h1>
+              <h3 class="subheader">Magellan is a style-agnostic plugin that lets you give your site sticky navigation. This fixed-position navigation helps users keep track of where they are on a page without scrolling.</h3>
+
+<hr/>
+<div t:type="any" t:mixins="foundation/magellan" magellan.params="params" t:id="MagellanContainer" class="magellan-container" style="background-color:#fff !important;" data-magellan-expedition="fixed" data-options="destination_threshold:65;throttle_delay:0;" >
+  <dl class="sub-nav">
+    <dd data-magellan-arrival="arrival"><a href="#arrival">Arrival</a></dd>
+    <dd data-magellan-arrival="destination"><a href="#destination">Destination</a></dd>
+    <dd data-magellan-arrival="js"><a href="#js">Javascript</a></dd>
+  </dl>
+</div>
+
+<hr/>
+<p><a name="arrival"></a></p>
+<h3 data-magellan-destination="arrival">Arrival</h3>
+
+<p>You can create the fixed navigation structure for Magellan using minimal markup.</p>
+<h4>HTML</h4>
+
+<pre><code class="language-html"><div class="code-container"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">data-magellan-expedition</span>=<span class="value">"fixed"</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">dl</span> <span class="attribute">class</span>=<span class="value">"sub-nav"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">dd</span> <span class="attribute">data-magellan-arrival</span>=<span class="value">"build"</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#build"</span>&gt;</span>Build with HTML<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">dd</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">dd</span> <span class="attribute">data-magellan-arrival</span>=<span class="value">"js"</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#js"</span>&gt;</span>Arrival 2<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">dd</span>&gt;</span>
+  <span class="tag">&lt;/<span class="title">dl</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span></div></code></pre>
+
+
+<p>The <a href="subnav.html">sub nav</a> is currently the only component compatible with Magellan.</p>
+
+<hr/>
+<p><a name="destination"></a></p>
+<h3 data-magellan-destination="destination">Destination</h3>
+
+<p>You can create the destination structure for Magellan using minimal markup.</p>
+<h4>HTML</h4>
+
+<pre><code class="language-html"><div class="code-container"><span class="tag">&lt;<span class="title">a</span> <span class="attribute">name</span>=<span class="value">"arrival"</span>&gt;</span><span class="tag">&lt;/<span class="title">a</span>&gt;</span>
+<span class="tag">&lt;<span class="title">h3</span> <span class="attribute">data-magellan-destination</span>=<span class="value">"arrival"</span>&gt;</span>Arrival<span class="tag">&lt;/<span class="title">h3</span>&gt;</span>
+
+<span class="tag">&lt;<span class="title">a</span> <span class="attribute">name</span>=<span class="value">"destination"</span>&gt;</span><span class="tag">&lt;/<span class="title">a</span>&gt;</span>
+<span class="tag">&lt;<span class="title">h3</span> <span class="attribute">data-magellan-destination</span>=<span class="value">"destination"</span>&gt;</span>Destination<span class="tag">&lt;/<span class="title">h3</span>&gt;</span></div></code></pre>
+
+
+<hr/>
+<p><a name="js"></a></p>
+<h3 data-magellan-destination="js">Configure with JS</h3>
+
+<p>It&#39;s easy to configure Magellan using our provided Javascript. You can use with data-attributes or plain old Javascript. Make sure <code>jquery.js</code>, <code>foundation.js</code>, and <code>foundation.magellan.js</code> have been included on your page before continuing. For example, add the following before the closing <code>&lt;body&gt;</code> tag:</p>
+<h4>HTML</h4>
+
+<pre><code class="language-html"><div class="code-container">
+  <span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"js/vendor/jquery.js"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"js/foundation/foundation.js"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"js/foundation/foundation.magellan.js"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></div></code></pre>
+
+
+
+<h3>Basic</h3>
+
+<p>Using data-attributes is the preferred method of making changes to our Javascript.</p>
+<h4>HTML</h4>
+
+<pre><code class="language-html"><div class="code-container"><span class="tag">&lt;<span class="title">h3</span> <span class="attribute">data-magellan-destination</span>=<span class="value">"js"</span>&gt;</span>Using Our Javascript<span class="tag">&lt;/<span class="title">h3</span>&gt;</span>
+
+<span class="tag">&lt;<span class="title">div</span> <span class="attribute">data-magellan-expedition</span>=<span class="value">"fixed"</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">ul</span> <span class="attribute">class</span>=<span class="value">"sub-nav"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">li</span> <span class="attribute">data-magellan-arrival</span>=<span class="value">"build"</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#build"</span>&gt;</span>Build with HTML<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">li</span> <span class="attribute">data-magellan-arrival</span>=<span class="value">"js"</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#js"</span>&gt;</span>Arrival 2<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+  <span class="tag">&lt;/<span class="title">ul</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span></div></code></pre>
+
+
+<hr/>
+<h3>Advanced</h3>
+
+<p>You can adjust lots of settings. For example:</p>
+<h4 id="js">JS</h4>
+<pre><code class="language-javascript"><div class="code-container">$(document).foundation({
+<span class="string">"magellan-expedition"</span>: {
+  active_class: <span class="string">'active'</span>, <span class="comment">// specify the class used for active sections</span>
+  threshold: <span class="number">0</span>, <span class="comment">// how many pixels until the magellan bar sticks, 0 = auto</span>
+  destination_threshold: <span class="number">20</span>, <span class="comment">// pixels from the top of destination for it to be considered active</span>
+  throttle_delay: <span class="number">50</span>, <span class="comment">// calculation throttling to increase framerate</span>
+  fixed_top: <span class="number">0</span>, <span class="comment">// top distance in pixels assigend to the fixed element on scroll</span>
+  offset_by_height: <span class="literal">true</span> <span class="comment">// whether to offset the destination by the expedition height. Usually you want this to be true, unless your expedition is on the side.</span>
+}
+});</div></code></pre>
+
+
+
+<hr/>
+<h3 id="adding-new-content-after-page-load">Adding New Content After Page Load</h3>
+<p>If you add new content after the page has been loaded, you will need to reinitialize the Foundation JavaScript by running the following:</p>
+<pre><code class="language-javascript"><div class="code-container">$(document).foundation();</div></code></pre>
+
+
+<p>Reflow will make Foundation check the DOM for any elements and re-apply any listeners to them.</p>
+<pre><code class="language-javascript"><div class="code-container">$(document).foundation(<span class="string">'magellan'</span>, <span class="string">'reflow'</span>);</div></code></pre>
+
+
+<hr/>
+<h3 id="sass-errors-">Sass Errors?</h3>
+<p>If the default &quot;foundation&quot; import was commented out, then make sure you import this file:</p>
+<h4>SCSS</h4>
+
+<pre><code class="language-scss"><div class="code-container"><span class="at_rule">@<span class="keyword">import</span> <span class="string">"foundation/components/magellan"</span>;</span></div></code></pre>
+
+
+<hr/>
+<h2 id="accessibility">Accessibility</h2>
+<p class="panel">This component is not yet accessible. Stay tuned for updates in future releases.</p>
+
+           
+</div>
+</html>

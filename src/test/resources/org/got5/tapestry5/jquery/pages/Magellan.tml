@@ -8,7 +8,7 @@
               <h3 class="subheader">Magellan is a style-agnostic plugin that lets you give your site sticky navigation. This fixed-position navigation helps users keep track of where they are on a page without scrolling.</h3>
 
 <hr/>
-<div t:type="any" t:mixins="foundation/magellan" magellan.params="params" t:id="MagellanContainer" class="magellan-container" style="background-color:#fff !important;" data-magellan-expedition="fixed" data-options="destination_threshold:65;throttle_delay:0;" >
+<div t:type="any" t:mixins="foundation/foundationWidget" foundationWidget.params="params" foundationWidget.widgetName="magellan" t:id="MagellanContainer" class="magellan-container" style="background-color:#fff !important;" data-magellan-expedition="fixed" data-options="destination_threshold:65;throttle_delay:0;" >
   <dl class="sub-nav">
     <dd data-magellan-arrival="arrival"><a href="#arrival">Arrival</a></dd>
     <dd data-magellan-arrival="destination"><a href="#destination">Destination</a></dd>

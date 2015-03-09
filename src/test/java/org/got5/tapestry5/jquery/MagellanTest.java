@@ -26,7 +26,7 @@ public class MagellanTest extends SeleniumTestCase {
 	        {
 	            return getAttribute("//*[@id='MagellanContainer']/dl/dd["+num+"]@class").contains("active");
 	        }
-	    }.wait(num+" should be actived", 2000);
+	    }.wait(num+" should be actived", FoundationTestConstants.TIMEOUT);
     }
 
 }

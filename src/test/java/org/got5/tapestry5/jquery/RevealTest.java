@@ -57,7 +57,7 @@ public class RevealTest extends SeleniumTestCase {
 
                 return isVisible(modalSelector);
             }
-        }.wait("The reveal window is not visible", JQueryTestConstants.TIMEOUT);
+        }.wait("The reveal window is not visible", FoundationTestConstants.TIMEOUT);
 
         click("//div[@class='reveal-modal-bg']");
 
@@ -68,6 +68,6 @@ public class RevealTest extends SeleniumTestCase {
 
                 return !isVisible(modalSelector);
             }
-        }.wait("The reveal window visible", JQueryTestConstants.TIMEOUT);
+        }.wait("The reveal window visible", FoundationTestConstants.TIMEOUT);
     }
 }

@@ -1,0 +1,323 @@
+<html t:type="layout"
+	xmlns:t="http://tapestry.apache.org/schema/tapestry_5_4.xsd"
+	xmlns:p="tapestry:parameter">
+
+
+ <div class="large-9 medium-8 columns">
+              <h1 id="tabs">Tabs</h1>
+              <h3 class="subheader">Tabs are elements that help you organize and navigate multiple documents in a single container. They can be used for switching between items in the container.</h3>
+
+<hr/>
+<h3 id="horizontal-tabs">Horizontal Tabs</h3>
+<div>
+<ul class="tabs" data-tab="" t:type="any" t:mixins="foundation/foundationWidget" foundationWidget.params="params" foundationWidget.widgetName="tab"  >
+  <li class="tab-title active"><a href="#panela">Tab 1</a></li>
+  <li class="tab-title"><a href="#panelb">Tab 2</a></li>
+  <li class="tab-title"><a href="#panelc">Tab 3</a></li>
+  <li class="tab-title"><a href="#paneld">Tab 4</a></li>
+</ul>
+<div class="tabs-content">
+  <div class="content active" id="panela">
+    <div class="row">
+      <div class="small-3 columns">
+        <img src="http://placehold.it/350x150"/>
+      </div>
+      <div class="small-4 end columns">
+        <p>This is the first panel of the basic tab example. You can place all sorts of content here including a grid.</p>
+      </div>
+    </div>
+  </div>
+  <div class="content" id="panelb">
+    <p>This is the second panel of the basic tab example. This is the second panel of the basic tab example.</p>
+  </div>
+  <div class="content" id="panelc">
+    <p>This is the third panel of the basic tab example. This is the third panel of the basic tab example.</p>
+  </div>
+  <div class="content" id="paneld">
+    <p>This is the fourth panel of the basic tab example. This is the fourth panel of the basic tab example.</p>
+  </div>
+</div>
+
+<p></p></div>
+<h3 id="vertical-tabs">Vertical Tabs</h3>
+<div>
+<ul class="tabs vertical" data-tab="">
+  <li class="tab-title active"><a href="#panela1">Tab 1</a></li>
+  <li class="tab-title"><a href="#panelb1">Tab 2</a></li>
+  <li class="tab-title"><a href="#panelc1">Tab 3</a></li>
+  <li class="tab-title"><a href="#paneld1">Tab 4</a></li>
+</ul>
+<div class="tabs-content">
+  <div class="content active" id="panela1">
+    <p>This is the first panel of the basic tab example. This is the first panel of the basic tab example.</p>
+  </div>
+  <div class="content" id="panelb1">
+    <p>This is the second panel of the basic tab example. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, nesciunt. Aperiam sed expedita quo. Ipsam iusto sapiente animi? Voluptatem ut facilis maxime minima. Aperiam, at non sequi molestias tempora. Enim.</p>
+  </div>
+  <div class="content" id="panelc1">
+    <p>This is the third panel of the basic tab example. This is the third panel of the basic tab example.</p>
+  </div>
+  <div class="content" id="paneld1">
+    <p>This is the fourth panel of the basic tab example. This is the fourth panel of the basic tab example.</p>
+  </div>
+</div>
+
+<p></p></div>
+<hr/>
+<h3>Basic</h3>
+
+<p>You can create a group of horizontal tabs using minimal markup.</p>
+<div class="row">
+  <div class="large-6 columns">
+    <h4>HTML</h4>
+<pre><code class="language-html"><div class="code-container"><span class="tag">&lt;<span class="title">ul</span> <span class="attribute">class</span>=<span class="value">&quot;tabs&quot;</span> <span class="attribute">data-tab</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">li</span> <span class="attribute">class</span>=<span class="value">&quot;tab-title active&quot;</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">&quot;#panel1&quot;</span>&gt;</span>Tab 1<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">li</span> <span class="attribute">class</span>=<span class="value">&quot;tab-title&quot;</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">&quot;#panel2&quot;</span>&gt;</span>Tab 2<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">li</span> <span class="attribute">class</span>=<span class="value">&quot;tab-title&quot;</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">&quot;#panel3&quot;</span>&gt;</span>Tab 3<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">li</span> <span class="attribute">class</span>=<span class="value">&quot;tab-title&quot;</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">&quot;#panel4&quot;</span>&gt;</span>Tab 4<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">ul</span>&gt;</span>
+<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">&quot;tabs-content&quot;</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">&quot;content active&quot;</span> <span class="attribute">id</span>=<span class="value">&quot;panel1&quot;</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">p</span>&gt;</span>This is the first panel of the basic tab example. You can place all sorts of content here including a grid.<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
+  <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">&quot;content&quot;</span> <span class="attribute">id</span>=<span class="value">&quot;panel2&quot;</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">p</span>&gt;</span>This is the second panel of the basic tab example. This is the second panel of the basic tab example.<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
+  <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">&quot;content&quot;</span> <span class="attribute">id</span>=<span class="value">&quot;panel3&quot;</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">p</span>&gt;</span>This is the third panel of the basic tab example. This is the third panel of the basic tab example.<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
+  <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">&quot;content&quot;</span> <span class="attribute">id</span>=<span class="value">&quot;panel4&quot;</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">p</span>&gt;</span>This is the fourth panel of the basic tab example. This is the fourth panel of the basic tab example.<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
+  <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span></div></code></pre>
+
+  </div>
+  <div class="large-6 columns">
+    <h4>Rendered HTML</h4>
+<ul class="tabs" data-tab="">
+  <li class="tab-title active"><a href="#panel1">Tab 1</a></li>
+  <li class="tab-title"><a href="#panel2">Tab 2</a></li>
+  <li class="tab-title"><a href="#panel3">Tab 3</a></li>
+  <li class="tab-title"><a href="#panel4">Tab 4</a></li>
+</ul>
+<div class="tabs-content">
+  <div class="content active" id="panel1">
+    <p>This is the first panel of the basic tab example. You can place all sorts of content here including a grid.</p>
+  </div>
+  <div class="content" id="panel2">
+    <p>This is the second panel of the basic tab example. This is the second panel of the basic tab example.</p>
+  </div>
+  <div class="content" id="panel3">
+    <p>This is the third panel of the basic tab example. This is the third panel of the basic tab example.</p>
+  </div>
+  <div class="content" id="panel4">
+    <p>This is the fourth panel of the basic tab example. This is the fourth panel of the basic tab example.</p>
+  </div>
+</div>
+
+
+<p> </p> </div>
+</div>
+<p class="lead panel">Note: Tabs used to require <code>&lt;dl&gt;</code> and <code>&lt;dd&gt;</code> markup. It now works with <code>&lt;ul&gt;</code>&#39;s and <code>&lt;li&gt;</code>&#39;s as well.</p>
+
+<hr/>
+<h3 id="vertical-tabs">Vertical Tabs</h3>
+<p>You can create a group of vertical tabs using minimal markup. Just adding the class <code>vertical</code> changes the orientation of horizontal tabs.</p>
+<h4>HTML</h4>
+
+<pre><code class="language-html"><div class="code-container"><span class="tag">&lt;<span class="title">ul</span> <span class="attribute">class</span>=<span class="value">"tabs vertical"</span> <span class="attribute">data-tab</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">li</span> <span class="attribute">class</span>=<span class="value">"tab-title active"</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#panel11"</span>&gt;</span>Tab 1<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">li</span> <span class="attribute">class</span>=<span class="value">"tab-title"</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#panel21"</span>&gt;</span>Tab 2<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">li</span> <span class="attribute">class</span>=<span class="value">"tab-title"</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#panel31"</span>&gt;</span>Tab 3<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">li</span> <span class="attribute">class</span>=<span class="value">"tab-title"</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#panel41"</span>&gt;</span>Tab 4<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">ul</span>&gt;</span>
+<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"tabs-content"</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"content active"</span> <span class="attribute">id</span>=<span class="value">"panel11"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">p</span>&gt;</span>This is the first panel of the basic tab example. You can place all sorts of content here including a grid.<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
+  <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"content"</span> <span class="attribute">id</span>=<span class="value">"panel21"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">p</span>&gt;</span>This is the second panel of the basic tab example. This is the second panel of the basic tab example.<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
+  <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"content"</span> <span class="attribute">id</span>=<span class="value">"panel31"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">p</span>&gt;</span>This is the third panel of the basic tab example. This is the third panel of the basic tab example.<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
+  <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"content"</span> <span class="attribute">id</span>=<span class="value">"panel41"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">p</span>&gt;</span>This is the fourth panel of the basic tab example. This is the fourth panel of the basic tab example.<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
+  <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span></div></code></pre>
+
+
+<h4>Rendered HTML</h4>
+
+<p><ul class="tabs vertical" data-tab="">
+  <li class="tab-title active"><a href="#panel11">Tab 1</a></li>
+  <li class="tab-title"><a href="#panel21">Tab 2</a></li>
+  <li class="tab-title"><a href="#panel31">Tab 3</a></li>
+  <li class="tab-title"><a href="#panel41">Tab 4</a></li>
+</ul></p>
+<div class="tabs-content">
+  <div class="content active" id="panel11">
+    <p>This is the first panel of the basic tab example. You can place all sorts of content here including a grid.</p>
+  </div>
+  <div class="content" id="panel21">
+    <p>This is the second panel of the basic tab example. This is the second panel of the basic tab example.</p>
+  </div>
+  <div class="content" id="panel31">
+    <p>This is the third panel of the basic tab example. This is the third panel of the basic tab example.</p>
+  </div>
+  <div class="content" id="panel41">
+    <p>This is the fourth panel of the basic tab example. This is the fourth panel of the basic tab example.</p>
+  </div>
+</div>
+
+
+
+<div class="clearfix"></div>
+
+<hr/>
+<h3 id="deep-linking-to-tabs-or-tab-contents">Deep linking to tabs or tab contents</h3>
+<p>The tabs Foundation component can parse the location hash value and open the corresponding tab content pane. To enable deep linking set <code>data-options=&quot;deep_linking:true&quot;</code>. If the location hash maps to an element ID within a tab content pane, then the appropriate tab will become active and the browser window will scroll to the specified element. If you do not want to scroll to the specified element then set <code>data-options=&quot;scroll_to_content: false&quot;</code>.</p>
+<p>In the following example, deep linking is enabled. If the location hash is <code>#tabs-deeplink-2</code> then the second tab will become active. If the location hash is <code>#tabs-deeplink-content-2</code> then the second tab will become active, and the browser will scroll to the paragraph tag with ID, tabs-deeplink-content-2.</p>
+<p><ul class="tabs" data-tab="" role="tablist" data-options="deep_linking: true">
+  <li class="tab-title active" role="presentational"><a href="#tabs-deeplink-1" role="tab" tabindex="0" aria-selected="true" controls="tabs-deeplink-1">Tab 1</a></li>
+  <li class="tab-title active" role="presentational"><a href="#tabs-deeplink-2" role="tab" tabindex="0" aria-selected="true" controls="tabs-deeplink-2">Tab 2</a></li>
+  <li class="tab-title active" role="presentational"><a href="#tabs-deeplink-3" role="tab" tabindex="0" aria-selected="true" controls="tabs-deeplink-3">Tab 3</a></li>
+</ul></p>
+<div class="tabs-content">
+  <section id="tabs-deeplink-1" role="tabpanel" aria-hidden="false" class="content active">
+    <h2>First Panel Header</h2>
+    <p id="tabs-deeplink-content-1">First panel content goes here...</p>
+  </section>
+  <section id="tabs-deeplink-2" role="tabpanel" aria-hidden="true" class="content" >
+    <h2>Second Panel Header</h2>
+    <p id="tabs-deeplink-content-2"> Second panel content goes here...</p>
+  </section>
+  <section id="tabs-deeplink-3" role="tabpanel" aria-hidden="true" class="content" >
+    <h2>Third Panel Header</h2>
+    <p id="tabs-deeplink-content-3"> Third panel content goes here...</p>
+  </section>
+</div>
+
+<hr/>
+<h3 id="callbacks">Callbacks</h3>
+<p>There are two ways to bind to callbacks in your tabs.</p>
+<div class="row">
+  <div class="large-6 columns">
+<p><h4>Callback function</h4></p>
+<pre><code class="language-html"><div class="code-container"><span class="tag">&lt;<span class="title">script</span>&gt;</span><span class="javascript">
+  $(document).foundation({
+    tab: {
+      callback : <span class="function"><span class="keyword">function</span> <span class="params">(tab)</span> {</span>
+        console.log(tab);
+      }
+    }
+  });
+</span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></div></code></pre>
+
+  </div>
+  <div class="large-6 columns">
+<p><h4>Toggled Event</h4></p>
+<pre><code class="language-html"><div class="code-container"><span class="tag">&lt;<span class="title">script</span>&gt;</span><span class="javascript">
+  $(<span class="string">&#39;#myTabs&#39;</span>).on(<span class="string">&#39;toggled&#39;</span>, <span class="function"><span class="keyword">function</span> <span class="params">(event, tab)</span> {</span>
+    console.log(tab);
+  });
+</span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></div></code></pre>
+
+  </div>
+</div>
+
+<hr/>
+<h2 id="accessibility">Accessibility</h2>
+<p>You can make tabs more accessible by using the code snippet below. The tabs are keyboard accessible meaning that a user can use the tab key or arrow keys to navigate through them. The role of <code>tablist</code> tells a screen reader what the element is and reads the necessary content.</p>
+<div class="row">
+  <div class="large-6 columns">
+    <h4>HTML</h4>
+<pre><code class="language-html"><div class="code-container"><span class="tag">&lt;<span class="title">ul</span> <span class="attribute">class</span>=<span class="value">&quot;tabs&quot;</span> <span class="attribute">data-tab</span> <span class="attribute">role</span>=<span class="value">&quot;tablist&quot;</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">li</span> <span class="attribute">class</span>=<span class="value">&quot;tab-title active&quot;</span> <span class="attribute">role</span>=<span class="value">&quot;presentational&quot;</span> &gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">&quot;#panel2-1&quot;</span> <span class="attribute">role</span>=<span class="value">&quot;tab&quot;</span> <span class="attribute">tabindex</span>=<span class="value">&quot;0&quot;</span> <span class="attribute">aria-selected</span>=<span class="value">&quot;true&quot;</span> <span class="attribute">controls</span>=<span class="value">&quot;panel2-1&quot;</span>&gt;</span>Tab 1<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">li</span> <span class="attribute">class</span>=<span class="value">&quot;tab-title&quot;</span> <span class="attribute">role</span>=<span class="value">&quot;presentational&quot;</span> &gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">&quot;#panel2-2&quot;</span> <span class="attribute">role</span>=<span class="value">&quot;tab&quot;</span> <span class="attribute">tabindex</span>=<span class="value">&quot;0&quot;</span><span class="attribute">aria-selected</span>=<span class="value">&quot;false&quot;</span> <span class="attribute">controls</span>=<span class="value">&quot;panel2-2&quot;</span>&gt;</span>Tab 2<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">li</span> <span class="attribute">class</span>=<span class="value">&quot;tab-title&quot;</span> <span class="attribute">role</span>=<span class="value">&quot;presentational&quot;</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">&quot;#panel2-3&quot;</span> <span class="attribute">role</span>=<span class="value">&quot;tab&quot;</span> <span class="attribute">tabindex</span>=<span class="value">&quot;0&quot;</span> <span class="attribute">aria-selected</span>=<span class="value">&quot;false&quot;</span> <span class="attribute">controls</span>=<span class="value">&quot;panel2-3&quot;</span>&gt;</span>Tab 3<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">li</span> <span class="attribute">class</span>=<span class="value">&quot;tab-title&quot;</span> <span class="attribute">role</span>=<span class="value">&quot;presentational&quot;</span> &gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">&quot;#panel2-4&quot;</span> <span class="attribute">role</span>=<span class="value">&quot;tab&quot;</span> <span class="attribute">tabindex</span>=<span class="value">&quot;0&quot;</span> <span class="attribute">aria-selected</span>=<span class="value">&quot;false&quot;</span> <span class="attribute">controls</span>=<span class="value">&quot;panel2-4&quot;</span>&gt;</span>Tab 4<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">ul</span>&gt;</span>
+<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">&quot;tabs-content&quot;</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">section</span> <span class="attribute">role</span>=<span class="value">&quot;tabpanel&quot;</span> <span class="attribute">aria-hidden</span>=<span class="value">&quot;false&quot;</span> <span class="attribute">class</span>=<span class="value">&quot;content active&quot;</span> <span class="attribute">id</span>=<span class="value">&quot;panel2-1&quot;</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">h2</span>&gt;</span>First panel content goes here...<span class="tag">&lt;/<span class="title">h2</span>&gt;</span>
+  <span class="tag">&lt;/<span class="title">section</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">section</span> <span class="attribute">role</span>=<span class="value">&quot;tabpanel&quot;</span> <span class="attribute">aria-hidden</span>=<span class="value">&quot;true&quot;</span> <span class="attribute">class</span>=<span class="value">&quot;content&quot;</span> <span class="attribute">id</span>=<span class="value">&quot;panel2-2&quot;</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">h2</span>&gt;</span>Second panel content goes here...<span class="tag">&lt;/<span class="title">h2</span>&gt;</span>
+  <span class="tag">&lt;/<span class="title">section</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">section</span> <span class="attribute">role</span>=<span class="value">&quot;tabpanel&quot;</span> <span class="attribute">aria-hidden</span>=<span class="value">&quot;true&quot;</span> <span class="attribute">class</span>=<span class="value">&quot;content&quot;</span> <span class="attribute">id</span>=<span class="value">&quot;panel2-3&quot;</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">h2</span>&gt;</span>Third panel content goes here...<span class="tag">&lt;/<span class="title">h2</span>&gt;</span>
+  <span class="tag">&lt;/<span class="title">section</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">section</span> <span class="attribute">role</span>=<span class="value">&quot;tabpanel&quot;</span> <span class="attribute">aria-hidden</span>=<span class="value">&quot;true&quot;</span> <span class="attribute">class</span>=<span class="value">&quot;content&quot;</span> <span class="attribute">id</span>=<span class="value">&quot;panel2-4&quot;</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">h2</span>&gt;</span>Fourth panel content goes here...<span class="tag">&lt;/<span class="title">h2</span>&gt;</span>
+  <span class="tag">&lt;/<span class="title">section</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span></div></code></pre>
+
+  </div>
+  <div class="large-6 columns">
+    <h4>Rendered HTML</h4>
+<ul class="tabs" data-tab="" role="tablist">
+  <li class="tab-title active" role="presentational" ><a href="#panel2-1" role="tab" tabindex="0" aria-selected="true" controls="panel2-1">Tab 1</a></li>
+  <li class="tab-title" role="presentational" ><a href="#panel2-2" role="tab" tabindex="0" aria-selected="false" controls="panel2-2">Tab 2</a></li>
+  <li class="tab-title" role="presentational"><a href="#panel2-3" role="tab" tabindex="0" aria-selected="false" controls="panel2-3">Tab 3</a></li>
+  <li class="tab-title" role="presentational" ><a href="#panel2-4" role="tab" tabindex="0" aria-selected="false" controls="panel2-4">Tab 4</a></li>
+</ul>
+<div class="tabs-content">
+  <section role="tabpanel" aria-hidden="false" class="content active" id="panel2-1">
+    <h2>First panel content goes here...</h2>
+  </section>
+  <section role="tabpanel" aria-hidden="true" class="content" id="panel2-2">
+    <h2>Second panel content goes here...</h2>
+  </section>
+  <section role="tabpanel" aria-hidden="true" class="content" id="panel2-3">
+    <h2>Third panel content goes here...</h2>
+  </section>
+  <section role="tabpanel" aria-hidden="true" class="content" id="panel2-4">
+    <h2>Fourth panel content goes here...</h2>
+  </section>
+</div>
+
+<p> </p> </div>
+</div>
+<hr/>
+<h3 id="adding-new-tab-content-after-page-load">Adding New Tab Content After Page Load</h3>
+<p>If you add new content after the page has been loaded, you will need to reinitialize the Foundation JavaScript by running the following:</p>
+<pre><code class="language-javascript"><div class="code-container">$(document).foundation();</div></code></pre>
+
+
+<p>Reflow will make Foundation check the DOM for any elements and re-apply any listeners to them.</p>
+<pre><code class="language-javascript"><div class="code-container">$(document).foundation(<span class="string">'tab'</span>, <span class="string">'reflow'</span>);</div></code></pre>
+
+
+<hr/>
+<h2 id="customize-with-sass">Customize with Sass</h2>
+<p>Tabs can be easily customized with the Sass variables provided in the <code>_settings.scss</code> file.</p>
+<h4>SCSS</h4>
+
+<pre><code class="language-scss"><div class="code-container">$include-<span class="tag">html</span>-tabs-classes<span class="value">: $include-html-classes;</span>
+
+$tabs-navigation-<span class="attribute">padding</span><span class="value">: rem-calc(<span class="number">16</span>);</span>
+$tabs-navigation-bg-<span class="attribute">color</span><span class="value">: $silver;</span>
+$tabs-navigation-active-bg-<span class="attribute">color</span><span class="value">: $white;</span>
+$tabs-navigation-hover-bg-<span class="attribute">color</span><span class="value">: scale-color($tabs-navigation-bg-color, $lightness: -<span class="number">6</span>%);</span>
+$tabs-navigation-<span class="attribute">font</span>-<span class="attribute">color</span><span class="value">: $jet;</span>
+$tabs-navigation-active-<span class="attribute">font</span>-<span class="attribute">color</span><span class="value">: $tabs-navigation-font-color;</span>
+$tabs-navigation-<span class="attribute">font-size</span><span class="value">: rem-calc(<span class="number">16</span>);</span>
+$tabs-navigation-<span class="attribute">font-family</span><span class="value">: $body-font-family;</span>
+
+$tabs-<span class="attribute">content</span>-<span class="attribute">margin-bottom</span><span class="value">: rem-calc(<span class="number">24</span>);</span>
+$tabs-<span class="attribute">content</span>-<span class="attribute">padding</span><span class="value">: $column-gutter/<span class="number">2</span>;</span>
+
+$tabs-vertical-navigation-<span class="attribute">margin-bottom</span><span class="value">: <span class="number">1.25</span>rem;</span></div></code></pre>
+
+
+
+<hr/>
+<h5 id="sass-errors-">Sass Errors?</h5>
+<p>If the default &quot;foundation&quot; import was commented out, then make sure you import this file:</p>
+<h4>SCSS</h4>
+
+<pre><code class="language-scss"><div class="code-container"><span class="at_rule">@<span class="keyword">import</span> <span class="string">"foundation/components/tabs"</span>;</span></div></code></pre>
+
+            </div>    
+</html>

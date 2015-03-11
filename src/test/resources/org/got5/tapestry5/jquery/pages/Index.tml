@@ -14,7 +14,9 @@
 				<li><a t:type="pagelink" t:page="reveal"><i
 						class="icon-chevron-right"></i> Reveal</a></li>
 				<li><a t:type="pagelink" t:page="magellan"><i
-						class="icon-chevron-right"></i> Magellan</a></li>		
+						class="icon-chevron-right"></i> Magellan</a></li>	
+				<li><a t:type="pagelink" t:page="tab"><i
+						class="icon-chevron-right"></i> Tab</a></li>					
 			</ul>
 		</section>
 	</div>

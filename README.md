@@ -9,5 +9,8 @@
 
 - **Magellan**
 	- Based on [http://foundation.zurb.com/docs/components/magellan.html](http://foundation.zurb.com/docs/components/magellan.html)	
+
+- **Tab**
+	- Based on [http://foundation.zurb.com/docs/components/tabs.html](http://foundation.zurb.com/docs/components/tabs.html)
 	
 	

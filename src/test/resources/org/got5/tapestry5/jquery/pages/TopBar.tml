@@ -1,0 +1,280 @@
+<html t:type="layout"
+	xmlns:t="http://tapestry.apache.org/schema/tapestry_5_4.xsd"
+	xmlns:p="tapestry:parameter">
+
+
+           <div class="large-9 medium-8 columns">
+              <h1 id="top-bar">Top Bar</h1>
+              <h3 class="subheader">The Foundation Top Bar gives you a great way to display a complex navigation bar on small, medium or large screens.</h3>
+
+<hr/>
+<nav class="top-bar" data-topbar="" role="navigation" t:type="any" t:mixins="foundation/foundationWidget" foundationWidget.params="params" foundationWidget.widgetName="topbar" >
+  <ul class="title-area">
+    <!-- Title Area -->
+    <li class="name">
+
+    </li>
+    <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+    <li class="toggle-topbar menu-icon"><a href=""><span>Menu</span></a></li>
+  </ul>
+
+  <section class="top-bar-section">
+    <ul class="left">
+      <li class="has-dropdown"><a href="#">Item 1</a>
+
+        <ul class="dropdown">
+          <li><label>Level One</label></li>
+          <li><a href="#">Sub-item 1</a></li>
+          <li><a href="#">Sub-item 2</a></li>
+          <li class="divider"></li>
+          <li><a href="#">Sub-item 3</a></li>
+          <li class="has-dropdown"><a href="#">Sub-item 4</a>
+
+            <ul class="dropdown">
+              <li><label>Level Two</label></li>
+              <li class="has-dropdown"><a href="#">Sub-item 1</a>
+
+                <ul class="dropdown">
+                  <li><label>Level Three</label></li>
+                  <li class="has-dropdown"><a href="#">Sub-item 1</a>
+
+                    <ul class="dropdown">
+                      <li><label>Level Four</label></li>
+                      <li><a href="#">Sub-item 1</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">Sub-item 2</a></li>
+                  <li><a href="#">Sub-item 3</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">Sub-item 4</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Sub-item 2</a></li>
+              <li><a href="#">Sub-item 3</a></li>
+              <li><a href="#">Sub-item 4</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Sub-item 5</a></li>
+        </ul>
+      </li>
+      <li class="divider"></li>
+    </ul>
+    <!-- Right Nav Section -->
+    <ul class="right">
+      <li class="divider"></li>
+      <li><a href="#">Item 2</a></li>
+    </ul>
+  </section>
+</nav>
+
+<hr/>
+<h3 id="build-with-html-classes">Build With HTML Classes</h3>
+<p>The top bar is a pretty complex piece of magical UI goodness. We rely on many presentational classes to define its look and feel, and there&#39;s a lot happening in the JS. The top bar is hoverable by default, but you can change it to use click events instead by adding <code>data-options=&quot;is_hover: false&quot;</code> to the <code>&lt;nav&gt;</code> element. <a href="#clickable">See an example below</a>.</p>
+<div class="row">
+  <div class="large-12 columns">
+    <nav class="top-bar" data-topbar="" role="navigation">
+      <ul class="title-area">
+        <li class="name">
+          <h1><a href="#">My Site</a></h1>
+        </li>
+        <li class="toggle-topbar menu-icon"><a href=""><span>Menu</span></a></li>
+      </ul>
+
+      <section class="top-bar-section">
+
+        <!-- Right Nav Section -->
+        <ul class="right show-for-large-up">
+          <li class="active"><a href="#">Right Button Active</a></li>
+          <li class="has-dropdown">
+            <a href="#">Right Button Dropdown</a>
+            <ul class="dropdown">
+              <li><a href="#">First link in dropdown</a></li>
+              <li class="active"><a href="#">Active link in dropdown</a></li>
+            </ul>
+          </li>
+        </ul>
+
+        <ul class="right hide-for-large-up">
+          <li class="active"><a href="#">Right Button</a></li>
+          <li class="has-dropdown">
+            <a href="#">Right Dropdown</a>
+            <ul class="dropdown">
+              <li><a href="#">First link in dropdown</a></li>
+              <li class="active"><a href="#">Active link in dropdown</a></li>
+            </ul>
+          </li>
+        </ul>
+
+        <!-- Left Nav Section -->
+        <ul class="left show-for-large-up">
+          <li><a href="#">Left Button</a></li>
+        </ul>
+      </section>
+    </nav>
+  </div>
+</div>
+<div><br/></div>
+
+<h4 id="html">HTML</h4>
+<pre><code class="language-html"><div class="code-container"><span class="tag">&lt;<span class="title">nav</span> <span class="attribute">class</span>=<span class="value">"top-bar"</span> <span class="attribute">data-topbar</span> <span class="attribute">role</span>=<span class="value">"navigation"</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">ul</span> <span class="attribute">class</span>=<span class="value">"title-area"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">li</span> <span class="attribute">class</span>=<span class="value">"name"</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">h1</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span>My Site<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">h1</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+     <span class="comment">&lt;!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone --&gt;</span>
+    <span class="tag">&lt;<span class="title">li</span> <span class="attribute">class</span>=<span class="value">"toggle-topbar menu-icon"</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span><span class="tag">&lt;<span class="title">span</span>&gt;</span>Menu<span class="tag">&lt;/<span class="title">span</span>&gt;</span><span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+  <span class="tag">&lt;/<span class="title">ul</span>&gt;</span>
+
+  <span class="tag">&lt;<span class="title">section</span> <span class="attribute">class</span>=<span class="value">"top-bar-section"</span>&gt;</span>
+    <span class="comment">&lt;!-- Right Nav Section --&gt;</span>
+    <span class="tag">&lt;<span class="title">ul</span> <span class="attribute">class</span>=<span class="value">"right"</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">li</span> <span class="attribute">class</span>=<span class="value">"active"</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span>Right Button Active<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">li</span> <span class="attribute">class</span>=<span class="value">"has-dropdown"</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span>Right Button Dropdown<span class="tag">&lt;/<span class="title">a</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">ul</span> <span class="attribute">class</span>=<span class="value">"dropdown"</span>&gt;</span>
+          <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span>First link in dropdown<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+          <span class="tag">&lt;<span class="title">li</span> <span class="attribute">class</span>=<span class="value">"active"</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span>Active link in dropdown<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+        <span class="tag">&lt;/<span class="title">ul</span>&gt;</span>
+      <span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">ul</span>&gt;</span>
+
+    <span class="comment">&lt;!-- Left Nav Section --&gt;</span>
+    <span class="tag">&lt;<span class="title">ul</span> <span class="attribute">class</span>=<span class="value">"left"</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span>Left Nav Button<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">ul</span>&gt;</span>
+  <span class="tag">&lt;/<span class="title">section</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">nav</span>&gt;</span></div></code></pre>
+
+
+<hr/>
+<h3 id="positioning-the-bar">Positioning the Bar</h3>
+<p>The top bar is built with a single <code>nav</code> element with a class of <code>top-bar</code>. It will take on full-browser width by default. To make the top bar stay fixed as you scroll, wrap it in <code>div class=&quot;fixed&quot;</code>. If you want your navigation to be set to your grid width, wrap it in <code>div class=&quot;contain-to-grid&quot;</code>. You may use <code>fixed</code> and <code>contain-to-grid</code> together in the wrapping div (<code>div class=&quot;contain-to-grid fixed</code>).</p>
+<div class="row">
+<div class="large-6 columns">
+
+<h5>Fixed Navigation</h5>
+
+<pre><code class="language-html"><div class="code-container"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">&quot;fixed&quot;</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">nav</span> <span class="attribute">class</span>=<span class="value">&quot;top-bar&quot;</span> <span class="attribute">data-topbar</span> <span class="attribute">role</span>=<span class="value">&quot;navigation&quot;</span>&gt;</span>
+    ...
+  <span class="tag">&lt;/<span class="title">nav</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span></div></code></pre>
+
+</div>
+<div class="large-6 columns">
+
+<h5>Contain to Grid</h5>
+
+<pre><code class="language-html"><div class="code-container"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">&quot;contain-to-grid&quot;</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">nav</span> <span class="attribute">class</span>=<span class="value">&quot;top-bar&quot;</span> <span class="attribute">data-topbar</span> <span class="attribute">role</span>=<span class="value">&quot;navigation&quot;</span>&gt;</span>
+    ...
+  <span class="tag">&lt;/<span class="title">nav</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span></div></code></pre>
+
+</div>
+</div>
+
+<hr/>
+<h3 id="sticky-top-bar">Sticky Top Bar</h3>
+<p>You may also wrap your top bar in <code>div class=&quot;sticky&quot;</code> and put it anywhere within your markup. When the navigation hits the top of the browser, it will act like the fixed top bar and stick to the top as users continue to scroll. <strong>Note:</strong> If you are using SCSS, you can control the default <code>sticky</code> class by adjusting the <code>$topbar-sticky-class</code> variable. <strong>Make sure the JS variable for <code>sticky_class</code> matches whatever class you use in the variable.</strong></p>
+<div class="row">
+  <div class="large-12 columns">
+    <div class="sticky">
+  <nav class="top-bar" data-topbar="" role="navigation" data-options="sticky_on: large">
+  <ul class="title-area">
+    <!-- Title Area -->
+    <li class="name">
+      <h1><a href="#">Sticky Top Bar</a></h1>
+    </li>
+    <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+  </ul>
+
+  <section class="top-bar-section">
+
+    <!-- Right Nav Section -->
+    <ul class="right">
+      <li class="divider hide-for-small"></li>
+      <li><a href="#">Main Item 1</a></li>
+    </ul>
+  </section>
+</nav>
+</div>
+
+<p></p>  </div>
+</div>
+<div><br/></div>
+
+<p>You can also add <code>sticky_on</code> to your <code>data-options</code> attribute to allow your sticky bar to work on <code>small</code>, <code>medium</code>, or <code>large</code> when the page loads. This works in conjunction with the sticky class wrapper to target sticky for small, medium, or large. It will be sticky on all screen sizes by default.</p>
+<p>Additionally, you can pass in an array to specify sticky on multiple sizes. For example, <code>data-options=&quot;sticky_on: [small,large]&quot;</code> will be sticky on small and large, but NOT medium.</p>
+
+<pre><code class="language-html"><div class="code-container"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"contain-to-grid sticky"</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">nav</span> <span class="attribute">class</span>=<span class="value">"top-bar"</span> <span class="attribute">data-topbar</span> <span class="attribute">role</span>=<span class="value">"navigation"</span> <span class="attribute">data-options</span>=<span class="value">"sticky_on: large"</span>&gt;</span>
+    ...
+  <span class="tag">&lt;/<span class="title">nav</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span></div></code></pre>
+
+
+<hr/>
+<p><a name="clickable"></a></p>
+<h3 id="clickable-top-bar">Clickable Top Bar</h3>
+<p>You can now make the top bar clickable by adding a data-attribute to the nav element. Here&#39;s an example:</p>
+<div class="row">
+  <div class="large-12 columns">
+    <nav class="top-bar" data-topbar="" role="navigation" data-options="is_hover: false">
+  <ul class="title-area">
+    <!-- Title Area -->
+    <li class="name">
+      <h1><a href="#">Clickable Top Bar</a></h1>
+    </li>
+    <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+  </ul>
+
+  <section class="top-bar-section">
+
+    <!-- Right Nav Section -->
+    <ul class="right">
+      <li class="divider hide-for-small"></li>
+      <li class="has-dropdown"><a>Main Item 1</a>
+        <ul class="dropdown">
+          <li><label>Dropdown Level 1 Label</label></li>
+          <li class="has-dropdown"><a>Dropdown Level 1a</a>
+
+            <ul class="dropdown">
+              <li><a href="#">Dropdown Level 2a</a></li>
+              <li><a href="#">Dropdown Level 2b</a></li>
+              <li class="has-dropdown"><a>Dropdown Level 2c</a>
+
+                <ul class="dropdown">
+                  <li><a href="#">Dropdown Level 3a</a></li>
+                  <li><a href="#">Dropdown Level 3b</a></li>
+                  <li><a href="#">Dropdown Level 3c</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Dropdown Level 2d</a></li>
+              <li><a href="#">Dropdown Level 2e</a></li>
+              <li><a href="#">Dropdown Level 2f</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Dropdown Level 1b</a></li>
+          <li><a href="#">Dropdown Level 1c</a></li>
+          <li class="divider"></li>
+          <li><label>Dropdown Level 1 Label</label></li>
+          <li><a href="#">Dropdown Level 1d</a></li>
+          <li><a href="#">Dropdown Level 1e</a></li>
+          <li><a href="#">Dropdown Level 1f</a></li>
+          <li class="divider"></li>
+          <li><a href="#">See all &rarr;</a></li>
+        </ul>
+      </li>
+    </ul>
+  </section>
+</nav>
+
+  </div>
+</div>
+</div>
+
+         
+</html>

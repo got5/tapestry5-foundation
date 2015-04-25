@@ -16,7 +16,11 @@
 				<li><a t:type="pagelink" t:page="magellan"><i
 						class="icon-chevron-right"></i> Magellan</a></li>	
 				<li><a t:type="pagelink" t:page="tab"><i
-						class="icon-chevron-right"></i> Tab</a></li>					
+						class="icon-chevron-right"></i> Tab</a></li>	
+				<li><a t:type="pagelink" t:page="DropDown"><i
+						class="icon-chevron-right"></i> DropDown</a></li>
+				<li><a t:type="pagelink" t:page="TopBar"><i
+						class="icon-chevron-right"></i> TopBar</a></li>									
 			</ul>
 		</section>
 	</div>

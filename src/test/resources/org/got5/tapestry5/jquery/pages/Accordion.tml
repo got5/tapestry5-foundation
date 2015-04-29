@@ -1,0 +1,344 @@
+<html t:type="layout"
+	xmlns:t="http://tapestry.apache.org/schema/tapestry_5_4.xsd"
+	xmlns:p="tapestry:parameter">
+
+
+<div class="large-9 medium-8 columns">
+              <h1 id="accordion">Accordion</h1>
+              <h3 class="subheader">Accordions are elements used to expand and collapse content that is broken into logical sections, much like tabs.</h3>
+
+<hr/>
+<ul class="accordion" data-accordion="" t:type="any" t:mixins="foundation/foundationWidget" foundationWidget.params="params" foundationWidget.widgetName="accordion" >
+  <li class="accordion-navigation">
+    <a href="#panel1a">Accordion 1</a>
+    <div id="panel1a" class="content active">
+      <ul class="small-block-grid-2 large-block-grid-3 ">
+        <li><img src="http://placehold.it/350x150"/></li>
+        <li><img src="http://placehold.it/350x150"/></li>
+        <li><img src="http://placehold.it/350x150"/></li>
+      </ul>
+    </div>
+  </li>
+  <li class="accordion-navigation">
+    <a href="#panel2a">Accordion 2</a>
+    <div id="panel2a" class="content">
+      <div class="row">
+        <div class="small-6 columns">
+          <p>Panel 2. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      	</div>
+      </div>
+      <div class="small-6 columns">
+        <img src="http://placehold.it/350x150"/>
+      </div>
+    </div>
+  </li>
+  <li class="accordion-navigation">
+    <a href="#panel3a">Accordion 3</a>
+    <div id="panel3a" class="content">
+      Panel 3. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    </div>
+  </li>
+</ul>
+
+<hr/>
+<h3>Basic</h3>
+
+<p>You can create an accordion using minimal markup like so:</p>
+<div class="row">
+  <div class="large-6 columns">
+    <h4>HTML</h4>
+<pre><code class="language-html"><div class="code-container"><span class="comment">&lt;!-- If you are using version 5.5 or greater you can use &lt;ul&gt;&#39;s and &lt;li&gt;&#39;s for Accordion markup --&gt;</span> 
+
+<span class="tag">&lt;<span class="title">ul</span> <span class="attribute">class</span>=<span class="value">&quot;accordion&quot;</span> <span class="attribute">data-accordion=""</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">li</span> <span class="attribute">class</span>=<span class="value">&quot;accordion-navigation&quot;</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">&quot;#panel1a&quot;</span>&gt;</span>Accordion 1<span class="tag">&lt;/<span class="title">a</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">&quot;panel1a&quot;</span> <span class="attribute">class</span>=<span class="value">&quot;content active&quot;</span>&gt;</span>
+      Panel 1. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+  <span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">li</span> <span class="attribute">class</span>=<span class="value">&quot;accordion-navigation&quot;</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">&quot;#panel2a&quot;</span>&gt;</span>Accordion 2<span class="tag">&lt;/<span class="title">a</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">&quot;panel2a&quot;</span> <span class="attribute">class</span>=<span class="value">&quot;content&quot;</span>&gt;</span>
+      Panel 2. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+  <span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">li</span> <span class="attribute">class</span>=<span class="value">&quot;accordion-navigation&quot;</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">&quot;#panel3a&quot;</span>&gt;</span>Accordion 3<span class="tag">&lt;/<span class="title">a</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">&quot;panel3a&quot;</span> <span class="attribute">class</span>=<span class="value">&quot;content&quot;</span>&gt;</span>
+      Panel 3. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+  <span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">ul</span>&gt;</span>
+
+<span class="comment">&lt;!-- Also works with &lt;dl&gt;&#39;s and &lt;dt&gt;&#39;s in place of &lt;ul&gt;&#39;s and &lt;li&gt;&#39;s. --&gt;</span> 
+
+<span class="tag">&lt;<span class="title">dl</span> <span class="attribute">class</span>=<span class="value">&quot;accordion&quot;</span> <span class="attribute">data-accordion=""</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">dd</span> <span class="attribute">class</span>=<span class="value">&quot;accordion-navigation&quot;</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">&quot;#panel1b&quot;</span>&gt;</span>Accordion 1<span class="tag">&lt;/<span class="title">a</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">&quot;panel1b&quot;</span> <span class="attribute">class</span>=<span class="value">&quot;content active&quot;</span>&gt;</span>
+      Panel 1. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+  <span class="tag">&lt;/<span class="title">dd</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">dd</span> <span class="attribute">class</span>=<span class="value">&quot;accordion-navigation&quot;</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">&quot;#panel2b&quot;</span>&gt;</span>Accordion 2<span class="tag">&lt;/<span class="title">a</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">&quot;panel2b&quot;</span> <span class="attribute">class</span>=<span class="value">&quot;content&quot;</span>&gt;</span>
+      Panel 2. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+  <span class="tag">&lt;/<span class="title">dd</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">dd</span> <span class="attribute">class</span>=<span class="value">&quot;accordion-navigation&quot;</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">&quot;#panel3b&quot;</span>&gt;</span>Accordion 3<span class="tag">&lt;/<span class="title">a</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">&quot;panel3b&quot;</span> <span class="attribute">class</span>=<span class="value">&quot;content&quot;</span>&gt;</span>
+      Panel 3. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+  <span class="tag">&lt;/<span class="title">dd</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">dl</span>&gt;</span></div></code></pre>
+
+  </div>
+  <div class="large-6 columns">
+    <h4>Rendered HTML</h4>
+    <ul class="accordion" data-accordion="">
+  <li class="accordion-navigation">
+    <a href="#panel3a">Accordion 1</a>
+    <div id="panel3a" class="content active">
+      Panel 1. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    </div>
+  </li>
+  <li class="accordion-navigation">
+    <a href="#panel3b">Accordion 2</a>
+    <div id="panel3b" class="content">
+      Panel 2. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    </div>
+  </li>
+  <li class="accordion-navigation">
+    <a href="#panel3c">Accordion 3</a>
+    <div id="panel3c" class="content">
+      Panel 3. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    </div>
+  </li>
+</ul>
+
+
+  </div>
+</div>
+
+<div class="panel"><p>Note: Accordion used to require <code>&lt;dl&gt;</code> and <code>&lt;dd&gt;</code> markup. It now works with <code>&lt;ul&gt;</code>&#39;s and <code>&lt;li&gt;</code>&#39;s as well. You need v5.5+ to use the newer markup.</p></div>
+
+<hr/>
+<h3>Distributed accordion groups</h3>
+
+<p>You can name the accordion so that it can be spread across different parent containers.  In this example the accordion is named <em>myAccordionGroup</em> and it is split between different columns in a block grid.  This allows the accordion to be responsive to screen width.</p>
+<div class="row">
+  <div class="large-6 columns">
+    <h4>HTML</h4>
+<pre><code class="language-html"><div class="code-container"><span class="tag">&lt;<span class="title">ul</span> <span class="attribute">class</span>=<span class="value">&quot;small-block-grid-1 medium-block-grid-3&quot;</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">li</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">ul</span> <span class="attribute">class</span>=<span class="value">&quot;accordion&quot;</span> <span class="attribute">data-accordion=""</span>=<span class="value">&quot;myAccordionGroup&quot;</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">li</span> <span class="attribute">class</span>=<span class="value">&quot;accordion-navigation&quot;</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">&quot;#panel1c&quot;</span>&gt;</span>Accordion 1<span class="tag">&lt;/<span class="title">a</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">&quot;panel1c&quot;</span> <span class="attribute">class</span>=<span class="value">&quot;content&quot;</span>&gt;</span>
+          Panel 1. Lorem ipsum dolor
+        <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+      <span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">li</span> <span class="attribute">class</span>=<span class="value">&quot;accordion-navigation&quot;</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">&quot;#panel2c&quot;</span>&gt;</span>Accordion 2<span class="tag">&lt;/<span class="title">a</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">&quot;panel2c&quot;</span> <span class="attribute">class</span>=<span class="value">&quot;content&quot;</span>&gt;</span>
+          Panel 2. Lorem ipsum dolor
+        <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+      <span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">li</span> <span class="attribute">class</span>=<span class="value">&quot;accordion-navigation&quot;</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">&quot;#panel3c&quot;</span>&gt;</span>Accordion 3<span class="tag">&lt;/<span class="title">a</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">&quot;panel3c&quot;</span> <span class="attribute">class</span>=<span class="value">&quot;content&quot;</span>&gt;</span>
+          Panel 3. Lorem ipsum dolor
+        <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+      <span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">ul</span>&gt;</span>
+  <span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">li</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">ul</span> <span class="attribute">class</span>=<span class="value">&quot;accordion&quot;</span> <span class="attribute">data-accordion=""</span>=<span class="value">&quot;myAccordionGroup&quot;</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">li</span> <span class="attribute">class</span>=<span class="value">&quot;accordion-navigation&quot;</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">&quot;#panel4c&quot;</span>&gt;</span>Accordion 4<span class="tag">&lt;/<span class="title">a</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">&quot;panel4c&quot;</span> <span class="attribute">class</span>=<span class="value">&quot;content&quot;</span>&gt;</span>
+          Panel 4. Lorem ipsum dolor
+        <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+      <span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">li</span> <span class="attribute">class</span>=<span class="value">&quot;accordion-navigation&quot;</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">&quot;#panel5c&quot;</span>&gt;</span>Accordion 5<span class="tag">&lt;/<span class="title">a</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">&quot;panel5c&quot;</span> <span class="attribute">class</span>=<span class="value">&quot;content&quot;</span>&gt;</span>
+          Panel 5. Lorem ipsum dolor
+        <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+      <span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">li</span> <span class="attribute">class</span>=<span class="value">&quot;accordion-navigation&quot;</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">&quot;#panel6c&quot;</span>&gt;</span>Accordion 6<span class="tag">&lt;/<span class="title">a</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">&quot;panel6c&quot;</span> <span class="attribute">class</span>=<span class="value">&quot;content&quot;</span>&gt;</span>
+          Panel 6. Lorem ipsum dolor
+        <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+      <span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">ul</span>&gt;</span>
+  <span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">ul</span>&gt;</span></div></code></pre>
+
+  </div>
+  <div class="large-6 columns">
+    <h4>Rendered HTML</h4>
+    <ul class="small-block-grid-1 medium-block-grid-3">
+  <li>
+    <ul class="accordion" data-accordion="myAccordionGroup">
+      <li class="accordion-navigation">
+        <a href="#panel1c">Accordion 1</a>
+        <div id="panel1c" class="content">
+          Panel 1. Lorem ipsum dolor
+        </div>
+      </li>
+      <li class="accordion-navigation">
+        <a href="#panel2c">Accordion 2</a>
+        <div id="panel2c" class="content">
+          Panel 2. Lorem ipsum dolor
+        </div>
+      </li>
+      <li class="accordion-navigation">
+        <a href="#panel3c">Accordion 3</a>
+        <div id="panel3c" class="content">
+          Panel 3. Lorem ipsum dolor
+        </div>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <ul class="accordion" data-accordion="myAccordionGroup">
+      <li class="accordion-navigation">
+        <a href="#panel4c">Accordion 4</a>
+        <div id="panel4c" class="content">
+          Panel 4. Lorem ipsum dolor
+        </div>
+      </li>
+      <li class="accordion-navigation">
+        <a href="#panel5c">Accordion 5</a>
+        <div id="panel5c" class="content">
+          Panel 5. Lorem ipsum dolor
+        </div>
+      </li>
+      <li class="accordion-navigation">
+        <a href="#panel6c">Accordion 6</a>
+        <div id="panel6c" class="content">
+          Panel 6. Lorem ipsum dolor
+        </div>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+  </div>
+</div>
+
+<hr/>
+<h3 id="callbacks">Callbacks</h3>
+<p>There are two ways to bind to callbacks in your tabs.</p>
+<div class="row">
+  <div class="large-6 columns">
+<p><h4>Callback function</h4></p>
+<pre><code class="language-html"><div class="code-container"><span class="tag">&lt;<span class="title">script</span>&gt;</span><span class="javascript">
+  $(document).foundation({
+    accordion: {
+      callback : <span class="function"><span class="keyword">function</span> <span class="params">(accordion)</span> {</span>
+        console.log(accordion);
+      }
+    }
+  });
+</span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></div></code></pre>
+
+  </div>
+  <div class="large-6 columns">
+<p><h4>Toggled Event</h4></p>
+<pre><code class="language-html"><div class="code-container"><span class="tag">&lt;<span class="title">script</span>&gt;</span><span class="javascript">
+  $(<span class="string">&#39;#myAccordionGroup&#39;</span>).on(<span class="string">&#39;toggled&#39;</span>, <span class="function"><span class="keyword">function</span> <span class="params">(event, accordion)</span> {</span>
+    console.log(accordion);
+  });
+</span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></div></code></pre>
+
+  </div>
+</div>
+
+<hr/>
+<h2 id="customize-with-sass">Customize with Sass</h2>
+<p>Accordions can be easily customized with the Sass variables provided in the <code>_settings.scss</code> file.</p>
+<h4>SCSS</h4>
+
+<pre><code class="language-scss"><div class="code-container">$include-<span class="tag">html</span>-accordion-classes<span class="value">: $include-html-classes;</span>
+
+$accordion-navigation-<span class="attribute">padding</span><span class="value">: rem-calc(<span class="number">16</span>);</span>
+$accordion-navigation-bg-<span class="attribute">color</span><span class="value">: $silver;</span>
+$accordion-navigation-hover-bg-<span class="attribute">color</span><span class="value">: scale-color($accordion-navigation-bg-color, $lightness: -<span class="number">5</span>%);</span>
+$accordion-navigation-active-bg-<span class="attribute">color</span><span class="value">: scale-color($accordion-navigation-bg-color, $lightness: -<span class="number">3</span>%);</span>
+$accordion-navigation-<span class="attribute">font</span>-<span class="attribute">color</span><span class="value">: $jet;</span>
+$accordion-navigation-<span class="attribute">font-size</span><span class="value">: rem-calc(<span class="number">16</span>);</span>
+$accordion-navigation-<span class="attribute">font-family</span><span class="value">: $body-font-family;</span>
+
+$accordion-<span class="attribute">content</span>-<span class="attribute">padding</span><span class="value">: $column-gutter/<span class="number">2</span>;</span>
+$accordion-<span class="attribute">content</span>-active-bg-<span class="attribute">color</span><span class="value">: $white;</span></div></code></pre>
+
+
+
+<hr/>
+<h2 id="configure-with-javascript">Configure With Javascript</h2>
+<p>It&#39;s easy to configure dropdowns using our provided Javascript. You can use data-attributes or plain old Javascript. Make sure <code>jquery.js</code>, <code>foundation.js</code> and <code>foundation.accordion.js</code> have been included on your page before continuing. For example, add the following before the closing <code>&lt;body&gt;</code> tag:</p>
+<pre><code class="language-html"><div class="code-container"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"js/vendor/jquery.js"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+<span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"js/foundation/foundation.js"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+<span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"js/foundation/foundation.accordion.js"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></div></code></pre>
+
+
+<h3 id="optional-javascript-configuration">Optional Javascript Configuration</h3>
+<h4 id="js">JS</h4>
+<pre><code class="language-js"><div class="code-container">$(document).foundation({
+  accordion: {
+    <span class="comment">// specify the class used for accordion panels</span>
+    content_class: <span class="string">'content'</span>,
+    <span class="comment">// specify the class used for active (or open) accordion panels</span>
+    active_class: <span class="string">'active'</span>,
+    <span class="comment">// allow multiple accordion panels to be active at the same time</span>
+    multi_expand: <span class="literal">false</span>,
+    <span class="comment">// allow accordion panels to be closed by clicking on their headers</span>
+    <span class="comment">// setting to false only closes accordion panels when another is opened</span>
+    toggleable: <span class="literal">true</span>
+  }
+});</div></code></pre>
+
+
+<hr/>
+<h3 id="adding-new-accordion-content-after-page-load">Adding New Accordion Content After Page Load</h3>
+<p>If you add new content after the page has been loaded, you will need to reinitialize the Foundation JavaScript by running the following:</p>
+<pre><code class="language-javascript"><div class="code-container">$(document).foundation();</div></code></pre>
+
+
+<p>Reflow will make Foundation check the DOM for any elements and re-apply any listeners to them.</p>
+<pre><code class="language-javascript"><div class="code-container">$(document).foundation(<span class="string">'accordion'</span>, <span class="string">'reflow'</span>);</div></code></pre>
+
+
+<hr/>
+<h2 id="semantic-markup-with-sass-mixins">Semantic Markup With Sass Mixins</h2>
+<p>You can use the a <code>accordion-container()</code>, <code>accordion-navigation</code>, and <code>accordion-navigation</code> mixins to create your own accordion with semantic markup, like so:</p>
+<p><div class="row">
+  <div class="large-12 columns">
+    <h4>SCSS</h4>
+<pre><code class="language-scss"><div class="code-container"><span class="class">.your-accordion-class</span>  {
+  <span class="at_rule">@<span class="keyword">include</span><span class="preprocessor"> accordion-container</span>;</span>
+
+  <span class="class">.your-accordion-navigation-class</span>  {
+    <span class="at_rule">@<span class="keyword">include</span><span class="preprocessor"> accordion-navigation</span>;</span>
+  }
+
+  <span class="class">.your-accordion-content-class</span>  {
+    <span class="at_rule">@<span class="keyword">include</span><span class="preprocessor"> accordion-content</span>;</span>
+  }
+}</div></code></pre>
+
+ </div>
+</div>
+</p>
+<h5 id="sass-errors-">Sass Errors?</h5>
+<p>If the default &quot;foundation&quot; import was commented out, then make sure you import this file:</p>
+<h4>SCSS</h4>
+
+<pre><code class="language-scss"><div class="code-container"><span class="at_rule">@<span class="keyword">import</span> <span class="string">"foundation/components/accordion"</span>;</span></div></code></pre>
+
+            </div>           
+</html>

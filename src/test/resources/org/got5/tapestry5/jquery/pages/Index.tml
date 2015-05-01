@@ -20,7 +20,9 @@
 				<li><a t:type="pagelink" t:page="DropDown"><i
 						class="icon-chevron-right"></i> DropDown</a></li>
 				<li><a t:type="pagelink" t:page="TopBar"><i
-						class="icon-chevron-right"></i> TopBar</a></li>									
+						class="icon-chevron-right"></i> TopBar</a></li>	
+				<li><a t:type="pagelink" t:page="Accordion"><i
+						class="icon-chevron-right"></i> Accordion</a></li>										
 			</ul>
 		</section>
 	</div>

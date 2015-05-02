@@ -20,5 +20,6 @@
 	- Based on [http://foundation.zurb.com/docs/components/topbar.html](http://foundation.zurb.com/docs/components/topbar.html)
 
 
-	
+- **Accordion**
+	- Based on [http://foundation.zurb.com/docs/components/accordion.html](http://foundation.zurb.com/docs/components/accordion.html)
 	

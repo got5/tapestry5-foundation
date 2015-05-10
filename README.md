@@ -22,4 +22,7 @@
 
 - **Accordion**
 	- Based on [http://foundation.zurb.com/docs/components/accordion.html](http://foundation.zurb.com/docs/components/accordion.html)
+
+- **Alert**
+	- Based on [http://foundation.zurb.com/docs/components/alert_boxes.html](http://foundation.zurb.com/docs/components/alert_boxes.html)
 	

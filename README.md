@@ -1,7 +1,8 @@
-# Tapestry 5 Foundation Module - 4.0.1-beta-26 for Tapestry 5.4-beta-26
-
+# Tapestry 5 Foundation Module - 4.0-beta-26-SNAPSHOT
 
 ## Features
+
+This module for Apache Tapestry provides a collections of components and mixin that ease the use of the Foundation CSS framework.
 
 	
 - **Reveal**
@@ -25,4 +26,11 @@
 
 - **Alert**
 	- Based on [http://foundation.zurb.com/docs/components/alert_boxes.html](http://foundation.zurb.com/docs/components/alert_boxes.html)
-	
+
+
+## To run this demo
+
+```bash
+mvn jetty:run
+```
+Application is now running in : [http://localhost:8080/](http://localhost:8080/)	

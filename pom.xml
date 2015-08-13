@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.got5</groupId>
 	<artifactId>tapestry5-foundation</artifactId>
-	<version>4.0.1-beta-26</version>
+	<version>4.0-beta-26-SNAPSHOT</version>
 	<packaging>jar</packaging>
 	<name>Tapestry 5 Foundation Library</name>
 	<description>Tapestry Components Library</description>

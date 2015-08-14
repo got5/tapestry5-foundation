@@ -1,4 +1,6 @@
-# Tapestry 5 Foundation Module - 4.0-beta-26-SNAPSHOT
+## Tapestry 5 Foundation Module - 4.0-beta-26-SNAPSHOT
+
+https://codeship.com/projects/96593/status?branch=master
 
 ## Features
 

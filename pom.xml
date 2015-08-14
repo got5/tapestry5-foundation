@@ -268,6 +268,10 @@
 		</plugins>
 	</reporting>
     <repositories>
+    	<repository>
+			<id>devlab722-repo</id>
+			<url>http://nexus.devlab722.net/nexus/content/repositories/releases</url>
+		</repository>
 		<repository>
 			<id>Apache Staging</id>
 			<url>https://repository.apache.org/content/groups/staging</url>

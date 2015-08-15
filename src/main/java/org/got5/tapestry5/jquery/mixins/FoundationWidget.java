@@ -13,7 +13,7 @@ import org.apache.tapestry5.services.javascript.JavaScriptSupport;
 
 
 /**
- * This mixin allows you to display a  site sticky navigation.
+ * This mixin allows you to add required javascript file for any foundation component.
  *
  * @since 4.0.1
  *
@@ -30,15 +30,20 @@ public class FoundationWidget{
 	@Inject
 	private JavaScriptSupport javaScriptSupport;
 
+	/**
+	 * Parameters to be used during the initialisation of thecomponent.
+	 */
 	@Parameter
     private JSONObject params;
 	
+	/**
+	 * The name of the foundation component to display.
+	 */
 	@Parameter(defaultPrefix=BindingConstants.LITERAL,required=true)
     private String widgetName;
 	
 	@AfterRender
 	public void finish(MarkupWriter w){
-
 		
 		JSONObject objParam = new	JSONObject();
 		objParam.put(widgetName, params);

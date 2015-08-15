@@ -7,30 +7,40 @@
 This module for Apache Tapestry provides a collections of components and mixin that ease the use of the Foundation CSS framework.
 
 	
-- **Reveal**
-	- Based on [http://foundation.zurb.com/docs/components/reveal.html](http://foundation.zurb.com/docs/components/reveal.html)	
+## Javascript Components
 
+###NAVIGATION
+- **Off-canvas**  will be available soon
+- **TopBar**
+	- Based on [http://foundation.zurb.com/docs/components/topbar.html](http://foundation.zurb.com/docs/components/topbar.html)
 - **Magellan**
 	- Based on [http://foundation.zurb.com/docs/components/magellan.html](http://foundation.zurb.com/docs/components/magellan.html)	
 
-- **Tab**
-	- Based on [http://foundation.zurb.com/docs/components/tabs.html](http://foundation.zurb.com/docs/components/tabs.html)
 
+### CALLOUTS & PROMPTS
+- **Reveal**
+	- Based on [http://foundation.zurb.com/docs/components/reveal.html](http://foundation.zurb.com/docs/components/reveal.html)	
+- **Alert**
+	- Based on [http://foundation.zurb.com/docs/components/alert_boxes.html](http://foundation.zurb.com/docs/components/alert_boxes.html)
+
+- **tooltips**  will be available soon
+
+- **Joyride**
+	- Based on [http://foundation.zurb.com/docs/components/joyride.html](http://foundation.zurb.com/docs/components/joyride.html)
+
+### CONTENT
 - **DropDown**
 	- Based on [http://foundation.zurb.com/docs/components/dropdown.html](http://foundation.zurb.com/docs/components/dropdown.html)
-
-- **TopBar**
-	- Based on [http://foundation.zurb.com/docs/components/topbar.html](http://foundation.zurb.com/docs/components/topbar.html)
-
 
 - **Accordion**
 	- Based on [http://foundation.zurb.com/docs/components/accordion.html](http://foundation.zurb.com/docs/components/accordion.html)
 
-- **Alert**
-	- Based on [http://foundation.zurb.com/docs/components/alert_boxes.html](http://foundation.zurb.com/docs/components/alert_boxes.html)
+- **Tab**
+	- Based on [http://foundation.zurb.com/docs/components/tabs.html](http://foundation.zurb.com/docs/components/tabs.html)
 
+- ** Equalizer**  will be available soon
 
-## To run this demo
+## To run the demo
 
 ```bash
 mvn jetty:run

@@ -1,0 +1,243 @@
+<html t:type="layout"
+	xmlns:t="http://tapestry.apache.org/schema/tapestry_5_4.xsd"
+	xmlns:p="tapestry:parameter">
+
+            <div class="large-9 medium-8 columns">
+              <h1 id="joyride">Joyride</h1>
+              <div id="component-name" name="Joyride"></div>
+              <h3 class="subheader">Joyride gives users a tour of your site or app when they visit.</h3>
+
+<hr/>
+<div id="firstStop" class="panel">Some awesome part of your site!</div>
+
+<hr/>
+<h2 id="numero1" class="so-awesome">Build Joyride with HTML</h2>
+<p>At the bottom of your page but inside of the body, place either an <code>ol</code> or <code>ul</code> with the <code>data-joyride</code> attribute. This list will contain all of the stops on your tour. To associate the tour stops with an item on your page, make sure the ID and data-id match between the two. If you do not associate an id, the tour stop will take on a modal style, positioning itself in the middle of the screen.</p>
+
+<pre><code class="language-html"><div class="code-container"><span class="comment">&lt;!-- At the bottom of your page but inside of the body tag --&gt;</span>
+<span class="tag">&lt;<span class="title">ol</span> <span class="attribute">class</span>=<span class="value">"joyride-list"</span> <span class="attribute">data-joyride</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">li</span> <span class="attribute">data-id</span>=<span class="value">"firstStop"</span> <span class="attribute">data-text</span>=<span class="value">"Next"</span> <span class="attribute">data-options</span>=<span class="value">"tip_location: top; prev_button: false"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">p</span>&gt;</span>Hello and welcome to the Joyride <span class="tag">&lt;<span class="title">br</span>&gt;</span>documentation page.<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
+  <span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">li</span> <span class="attribute">data-id</span>=<span class="value">"numero1"</span> <span class="attribute">data-class</span>=<span class="value">"custom so-awesome"</span> <span class="attribute">data-text</span>=<span class="value">"Next"</span> <span class="attribute">data-prev-text</span>=<span class="value">"Prev"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">h4</span>&gt;</span>Stop #1<span class="tag">&lt;/<span class="title">h4</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">p</span>&gt;</span>You can control all the details for you tour stop. Any valid HTML will work inside of Joyride.<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
+  <span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">li</span> <span class="attribute">data-id</span>=<span class="value">"numero2"</span> <span class="attribute">data-button</span>=<span class="value">"Next"</span> <span class="attribute">data-prev-text</span>=<span class="value">"Prev"</span> <span class="attribute">data-options</span>=<span class="value">"tip_location:top;tip_animation:fade"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">h4</span>&gt;</span>Stop #2<span class="tag">&lt;/<span class="title">h4</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">p</span>&gt;</span>Get the details right by styling Joyride with a custom stylesheet!<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
+  <span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">li</span> <span class="attribute">data-button</span>=<span class="value">"End"</span> <span class="attribute">data-prev-text</span>=<span class="value">"Prev"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">h4</span>&gt;</span>Stop #3<span class="tag">&lt;/<span class="title">h4</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">p</span>&gt;</span>It works as a modal too!<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
+  <span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">ol</span>&gt;</span></div></code></pre>
+
+
+
+
+<h3>We Add Some HTML with JS</h3>
+
+<p>To make Joyride really easy to use, we built its container and tour element inside the JS. This can make it hard to know what to target for styling purposes in some cases. To help this process go smoothly, here's what the output looks like with the appropriate classes to target for styling:</p>
+
+<pre><code class="language-html"><div class="code-container"><span class="comment">&lt;!-- Here is the markup our JS creates for you --&gt;</span>
+<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"joyride-tip-guide"</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"joyride-nub top"</span>&gt;</span><span class="tag">&lt;/<span class="title">span</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"joyride-content-wrapper"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">p</span>&gt;</span>Hello and welcome to the Joyride documentation page.<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span> <span class="attribute">class</span>=<span class="value">"small button joyride-next-tip"</span>&gt;</span>Next<span class="tag">&lt;/<span class="title">a</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#close"</span> <span class="attribute">class</span>=<span class="value">"joyride-close-tip"</span>&gt;</span>&amp;times;<span class="tag">&lt;/<span class="title">a</span>&gt;</span>
+  <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span></div></code></pre>
+
+
+<strong><em>
+
+## Accessibility
+
+<p class="panel">This component is keyboard accessible, but not fully screen reader accessible. Stay tuned for updates in future releases.</p>
+
+</em></strong>
+
+<h2 id="numero2">Available SCSS Variables</h2>
+
+<p>We've included a bunch of variables that you'll be able to use if you're into getting SASSy with things.</p>
+<pre><code class="language-scss"><div class="code-container">$include-<span class="tag">html</span>-joyride-classes<span class="value">: $include-html-classes;</span>
+
+<span class="comment">// Controlling default Joyride styles</span>
+$joyride-tip-bg<span class="value">: $oil;</span>
+$joyride-tip-<span class="value">default</span>-<span class="attribute">width</span><span class="value">: <span class="number">300</span>px;</span>
+$joyride-tip-<span class="attribute">padding</span><span class="value">: rem-calc(<span class="number">18</span> <span class="number">20</span> <span class="number">24</span>);</span>
+$joyride-tip-<span class="attribute">border</span><span class="value">: solid <span class="number">1</span>px $charcoal;</span>
+$joyride-tip-radius<span class="value">: <span class="number">4</span>px;</span>
+$joyride-tip-<span class="attribute">position</span>-offset<span class="value">: <span class="number">22</span>px;</span>
+
+<span class="comment">// Here, we're setting the tip font styles</span>
+$joyride-tip-<span class="attribute">font</span>-<span class="attribute">color</span><span class="value">: $white;</span>
+$joyride-tip-<span class="attribute">font-size</span><span class="value">: rem-calc(<span class="number">14</span>);</span>
+$joyride-tip-<span class="tag">header</span>-weight<span class="value">: $font-weight-bold;</span>
+
+<span class="comment">// This changes the nub size</span>
+$joyride-tip-nub-size<span class="value">: <span class="number">10</span>px;</span>
+
+<span class="comment">// This adjusts the styles for the timer when its enabled</span>
+$joyride-tip-timer-<span class="attribute">width</span><span class="value">: <span class="number">50</span>px;</span>
+$joyride-tip-timer-<span class="attribute">height</span><span class="value">: <span class="number">3</span>px;</span>
+$joyride-tip-timer-<span class="attribute">color</span><span class="value">: $steel;</span>
+
+<span class="comment">// This changes up the styles for the close button</span>
+$joyride-tip-close-<span class="attribute">color</span><span class="value">: $monsoon;</span>
+$joyride-tip-close-size<span class="value">: <span class="number">24</span>px;</span>
+$joyride-tip-close-weight<span class="value">: $font-weight-normal;</span>
+
+<span class="comment">// When Joyride is filling the screen, we use this style for the bg</span>
+$joyride-screenfill<span class="value">: rgba(<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0.5</span>);</span></div></code></pre>
+
+
+<hr/>
+<h3 id="using-the-javascript">Using the Javascript</h3>
+<div class="panel">
+  Before you can use Joyride you'll want to verify that jQuery and <code>foundation.js</code> are available on your page. You can refer to the <a href="../javascript.html">Javascript documentation</a> on setting that up.
+</div>
+
+<p>Just add <code>foundation.joyride.js</code> and <code>jquery.cookie.js</code> AFTER the <code>foundation.js</code> file. Your markup should look something like this:</p>
+<pre><code class="language-html"><div class="code-container"><span class="tag">&lt;<span class="title">body</span>&gt;</span>
+
+  ...
+
+  <span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"js/vendor/jquery.js"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"js/foundation/foundation.js"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"js/foundation/foundation.joyride.js"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"js/vendor/jquery.cookie.js"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span> <span class="comment">&lt;!-- Optional --&gt;</span>
+  <span class="comment">&lt;!-- Other JS plugins can be included here --&gt;</span>
+
+  <span class="tag">&lt;<span class="title">script</span>&gt;</span><span class="javascript">
+    $(document).foundation();
+  </span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+
+<span class="tag">&lt;/<span class="title">body</span>&gt;</span></div></code></pre>
+
+
+<p>Required Foundation Library: <code>foundation.joyride.js</code>, Optional JS Library: <code>jquery.cookie.js</code></p>
+<p>Joyride does not initialize on page load like the rest of the plugins. You need to call <code>start</code> to get it to load.</p>
+<pre><code class="language-javascript"><div class="code-container">$(document).foundation(<span class="string">'joyride'</span>, <span class="string">'start'</span>);</div></code></pre>
+
+
+<p>Then, you'll need to add a <code>data-joyride</code> to make the JS work properly on that element. It looks something like this:</p>
+<pre><code class="language-html"><div class="code-container"><span class="tag">&lt;<span class="title">ol</span> <span class="attribute">data-joyride</span>&gt;</span>
+  ...
+<span class="tag">&lt;/<span class="title">ol</span>&gt;</span></div></code></pre>
+
+
+<h3 id="optional-javascript-configuration">Optional Javascript Configuration</h3>
+<p>You can either set these options in a <code>data-options</code> attribute in the markup, <code>data-options="option: value; option2: value"</code> syntax, or pass in on initialization. Configurations that are <em>objects</em>, <em>functions</em>, or <em>arrays</em> can only be passed in during intitialization.</p>
+<pre><code class="language-javascript"><div class="code-container">{
+  expose                   : <span class="literal">false</span>,     <span class="comment">// turn on or off the expose feature</span>
+  modal                    : <span class="literal">true</span>,      <span class="comment">// Whether to cover page with modal during the tour</span>
+  keyboard                 : <span class="literal">true</span>,      <span class="comment">// enable left, right and esc keystrokes</span>
+  tip_location             : <span class="string">'bottom'</span>,  <span class="comment">// 'top' or 'bottom' in relation to parent</span>
+  nub_position             : <span class="string">'auto'</span>,    <span class="comment">// override on a per tooltip bases</span>
+  scroll_speed             : <span class="number">1500</span>,      <span class="comment">// Page scrolling speed in milliseconds, 0 = no scroll animation</span>
+  scroll_animation         : <span class="string">'linear'</span>,  <span class="comment">// supports 'swing' and 'linear', extend with jQuery UI.</span>
+  timer                    : <span class="number">0</span>,         <span class="comment">// 0 = no timer , all other numbers = timer in milliseconds</span>
+  start_timer_on_click     : <span class="literal">true</span>,      <span class="comment">// true or false - true requires clicking the first button start the timer</span>
+  start_offset             : <span class="number">0</span>,         <span class="comment">// the index of the tooltip you want to start on (index of the li)</span>
+  next_button              : <span class="literal">true</span>,      <span class="comment">// true or false to control whether a next button is used</span>
+  prev_button              : <span class="literal">true</span>,      <span class="comment">// true or false to control whether a prev button is used</span>
+  tip_animation            : <span class="string">'fade'</span>,    <span class="comment">// 'pop' or 'fade' in each tip</span>
+  pause_after              : [],        <span class="comment">// array of indexes where to pause the tour after</span>
+  exposed                  : [],        <span class="comment">// array of expose elements</span>
+  tip_animation_fade_speed : <span class="number">300</span>,       <span class="comment">// when tipAnimation = 'fade' this is speed in milliseconds for the transition</span>
+  cookie_monster           : <span class="literal">false</span>,     <span class="comment">// true or false to control whether cookies are used</span>
+  cookie_name              : <span class="string">'joyride'</span>, <span class="comment">// Name the cookie you'll use</span>
+  cookie_domain            : <span class="literal">false</span>,     <span class="comment">// Will this cookie be attached to a domain, ie. '.notableapp.com'</span>
+  cookie_expires           : <span class="number">365</span>,       <span class="comment">// set when you would like the cookie to expire.</span>
+  tip_container            : <span class="string">'body'</span>,    <span class="comment">// Where will the tip be attached</span>
+  tip_location_patterns    : {
+    top: [<span class="string">'bottom'</span>],
+    bottom: [], <span class="comment">// bottom should not need to be repositioned</span>
+    left: [<span class="string">'right'</span>, <span class="string">'top'</span>, <span class="string">'bottom'</span>],
+    right: [<span class="string">'left'</span>, <span class="string">'top'</span>, <span class="string">'bottom'</span>]
+  },
+  post_ride_callback     : <span class="function"><span class="keyword">function</span> <span class="params">()</span>{</span>},    <span class="comment">// A method to call once the tour closes (canceled or complete)</span>
+  post_step_callback     : <span class="function"><span class="keyword">function</span> <span class="params">()</span>{</span>},    <span class="comment">// A method to call after each step</span>
+  pre_step_callback      : <span class="function"><span class="keyword">function</span> <span class="params">()</span>{</span>},    <span class="comment">// A method to call before each step</span>
+  pre_ride_callback      : <span class="function"><span class="keyword">function</span> <span class="params">()</span>{</span>},    <span class="comment">// A method to call before the tour starts (passed index, tip, and cloned exposed element)</span>
+  post_expose_callback   : <span class="function"><span class="keyword">function</span> <span class="params">()</span>{</span>},    <span class="comment">// A method to call after an element has been exposed</span>
+  template : { <span class="comment">// HTML segments for tip layout</span>
+    link        : <span class="string">'&lt;a href="#close" class="joyride-close-tip"&gt;&amp;times;&lt;/a&gt;'</span>,
+    timer       : <span class="string">'&lt;div class="joyride-timer-indicator-wrap"&gt;&lt;span class="joyride-timer-indicator"&gt;&lt;/span&gt;&lt;/div&gt;'</span>,
+    tip         : <span class="string">'&lt;div class="joyride-tip-guide"&gt;&lt;span class="joyride-nub"&gt;&lt;/span&gt;&lt;/div&gt;'</span>,
+    wrapper     : <span class="string">'&lt;div class="joyride-content-wrapper"&gt;&lt;/div&gt;'</span>,
+    button      : <span class="string">'&lt;a href="#" class="small button joyride-next-tip"&gt;&lt;/a&gt;'</span>,
+    prev_button : <span class="string">'&lt;a href="#" class="small button joyride-prev-tip"&gt;&lt;/a&gt;'</span>,
+    modal       : <span class="string">'&lt;div class="joyride-modal-bg"&gt;&lt;/div&gt;'</span>,
+    expose      : <span class="string">'&lt;div class="joyride-expose-wrapper"&gt;&lt;/div&gt;'</span>,
+    expose_cover: <span class="string">'&lt;div class="joyride-expose-cover"&gt;&lt;/div&gt;'</span>
+  },
+  expose_add_class : <span class="string">''</span> <span class="comment">// One or more space-separated class names to be added to exposed element</span>
+}</div></code></pre>
+
+
+
+<p><!-- TOUR STOPS --></p>
+<ol class="joyride-list" data-joyride="" t:type="any" t:mixins="foundation/foundationWidget" foundationWidget.widgetName="joyride">
+  <li data-id="firstStop" data-text="Next" data-options="tip_location: top; prev_button: false" >
+    <p>Hello and welcome to the Joyride documentation page.</p>
+  </li>
+  <li data-id="numero1" data-class="custom so-awesome" data-text="Next" data-prev-text="Prev">
+    <h4>Stop #1</h4>
+    <p>You can control all the details for your tour stop. Any valid HTML will work inside of Joyride.</p>
+  </li>
+  <li data-id="numero2" data-button="Next" data-prev-text="Prev" data-options="tip_location:top;tip_animation:fade">
+    <h4>Stop #2</h4>
+    <p>Get the details right by styling Joyride with a custom stylesheet!</p>
+  </li>
+  <li data-button="End" data-prev-text="Prev">
+    <h4>Stop #3</h4>
+    <p>It works as a modal too!</p>
+  </li>
+</ol>
+
+
+<hr/>
+
+<h3 id="adding-new-content-after-page-load">Adding New Content After Page Load</h3>
+<p>If you add new content after the page has been loaded, you will need to reinitialize the Foundation JavaScript by running the following:</p>
+<pre><code class="language-javascript"><div class="code-container">$(document).foundation();</div></code></pre>
+
+
+<p>Reflow will make Foundation check the DOM for any elements and re-apply any listeners to them.</p>
+<pre><code class="language-javascript"><div class="code-container">$(document).foundation(<span class="string">'joyride'</span>, <span class="string">'reflow'</span>);</div></code></pre>
+
+
+<hr/>
+<h3 id="sass-errors-">Sass Errors?</h3>
+<p>If the default "foundation" import was commented out, then make sure you import this file:</p>
+<h4>SCSS</h4>
+
+<pre><code class="language-scss"><div class="code-container"><span class="at_rule">@<span class="keyword">import</span> <span class="string">"foundation/components/joyride"</span>;</span></div></code></pre>
+
+
+
+
+<p><br/>
+<br/></p>
+<hr/>
+
+<section class="building-blocks-section" style="display: none;">
+  <h2 class="building-blocks-header">Building Blocks Using Joyride</h2>
+  <div class="row">
+    <div data-building-blocks=""></div>
+  </div>
+
+  <br/>
+
+  <h3 class="building-blocks-header">Want more? Check out all the hot <a href="http://zurb.com/building-blocks">Building Blocks ⇨</a></h3>
+</section>
+
+
+
+            </div>
+         
+</html>

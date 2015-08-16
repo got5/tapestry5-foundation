@@ -1,10 +1,8 @@
-<project
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.got5</groupId>
 	<artifactId>tapestry5-foundation</artifactId>
-	<version>4.0-beta-26-SNAPSHOT</version>
+	<version>4.0-beta-26</version>
 	<packaging>jar</packaging>
 	<name>Tapestry 5 Foundation Library</name>
 	<description>This Tapestry library provides a collections of components and mixin that ease the use of the Foundation CSS framework.</description>
@@ -113,6 +111,10 @@
 	    <id>ossrh</id>
 	    <url>https://oss.sonatype.org/content/repositories/snapshots</url>
 	  </snapshotRepository>
+	  <repository>
+    	<id>ossrh</id>
+   	 	<url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+  	  </repository>
 	</distributionManagement>
 	<build>
 		<finalName>tapestry5-foundation</finalName>
@@ -268,8 +270,7 @@
 						</configuration>
 					</execution>
 				</executions>
-			</plugin>	
-			
+			</plugin>			
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 		        <artifactId>maven-assembly-plugin</artifactId>
@@ -298,7 +299,7 @@
          				 </instrumentation>
 					</configuration>
              </plugin>
-             </plugins>
+          </plugins>
 	</build>
 	<reporting>
 		<plugins>
@@ -359,6 +360,33 @@
             <properties>
                 <browserStartCommand>*firefox</browserStartCommand>
             </properties>
+        </profile>
+        <profile>
+            <id>release</id>
+            <activation>
+            <property>
+                <name>performRelease</name>
+                <value>true</value>
+            </property>
+        </activation>
+        <build>
+            <plugins>
+                <plugin>
+			      <groupId>org.apache.maven.plugins</groupId>
+			      <artifactId>maven-gpg-plugin</artifactId>
+			      <version>1.5</version>
+			      <executions>
+			        <execution>
+			          <id>sign-artifacts</id>
+			          <phase>verify</phase>
+			          <goals>
+			            <goal>sign</goal>
+			          </goals>
+			        </execution>
+			      </executions>
+			 	</plugin>
+            </plugins>
+        </build>
         </profile>
 	</profiles>
 

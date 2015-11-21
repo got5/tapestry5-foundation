@@ -1,4 +1,4 @@
-## Tapestry 5 Foundation Module - 4.0-beta-26-SNAPSHOT
+## Tapestry 5 Foundation Module - 4.0-rc-1
 
 ![Build Status](https://codeship.com/projects/060d8680-23ed-0133-2992-3eb60f8459a5/status?branch=master)
 
@@ -39,6 +39,43 @@ This module for Apache Tapestry provides a collections of components and mixin t
 	- Based on [http://foundation.zurb.com/docs/components/tabs.html](http://foundation.zurb.com/docs/components/tabs.html)
 
 - ** Equalizer**  will be available soon
+
+## How to use it
+
+Just  add the following dependency in your `pom.xml`.
+
+For Tapestry 5.4 :
+
+	<dependencies>
+		...
+		<dependency>
+			<groupId>org.got5</groupId>
+			<artifactId>tapestry5-foundation</artifactId>
+			<version>4.0-rc-1</version>
+		</dependency>
+		...
+	</dependencies>
+
+	<repositories>
+		...
+		<repository>
+          		<id>central</id>
+          		<url>https://repo1.maven.org/maven2</url>
+          		<releases>
+            			<enabled>true</enabled>
+          		</releases>
+        	</repository>
+
+		<repository>
+			<id>oss—sonatype-snapshot-repo</id>
+			<url>https://oss.sonatype.org/content/repositories/snapshots
+			</url>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+		</repository>
+		...
+	</repositories>
 
 ## To run the demo
 

@@ -1,4 +1,4 @@
-## Tapestry 5 Foundation Module - 4.0.0
+## Tapestry 5 Foundation Module - 4.1.0
 
 ![Build Status](https://codeship.com/projects/060d8680-23ed-0133-2992-3eb60f8459a5/status?branch=master)
 
@@ -51,7 +51,7 @@ For Tapestry 5.4 :
 		<dependency>
 			<groupId>org.got5</groupId>
 			<artifactId>tapestry5-foundation</artifactId>
-			<version>4.0.0</version>
+			<version>4.1.0</version>
 		</dependency>
 		...
 	</dependencies>

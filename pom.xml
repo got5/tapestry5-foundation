@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.got5</groupId>
 	<artifactId>tapestry5-foundation</artifactId>
-	<version>4.1.0-SNAPSHOT</version>
+	<version>4.1.0</version>
 	<packaging>jar</packaging>
 	<name>Tapestry 5 Foundation Library</name>
 	<description>This Tapestry library provides a collections of components and mixin that ease the use of the Foundation CSS framework.</description>

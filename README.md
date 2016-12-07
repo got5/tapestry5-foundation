@@ -1,6 +1,5 @@
 ## Tapestry 5 Foundation Module - 4.1.1
 
-![Build Status](https://codeship.com/projects/060d8680-23ed-0133-2992-3eb60f8459a5/status?branch=master)
 
 ## Features
 

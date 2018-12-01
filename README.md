@@ -1,4 +1,4 @@
-## Tapestry 5 Foundation Module - 4.1.1
+## Tapestry 5 Foundation Module - 4.1.2-SNAPSHOT
 
 
 ## Features
@@ -50,7 +50,7 @@ For Tapestry 5.4 :
 		<dependency>
 			<groupId>org.got5</groupId>
 			<artifactId>tapestry5-foundation</artifactId>
-			<version>4.1.1</version>
+			<version>4.1.2-SNAPSHOT</version>
 		</dependency>
 		...
 	</dependencies>
